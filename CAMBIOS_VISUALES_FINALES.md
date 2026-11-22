@@ -1,0 +1,1 @@
+Fondos nuevos de Ghostface azul sin barra de estado, elementos de inicio de sesion reales en SwiftUI, Telegram en login y menu, barra de estado oculta, animacion suave conservada. No se modifican paquetes offline ni voces. Requiere prueba de compilacion Xcode.

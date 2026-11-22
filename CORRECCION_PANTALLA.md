@@ -1,0 +1,1 @@
+Pantalla de Patches forzada al diseño neon en rutas de usuario y administrador. Se conserva el fondo GOD WITH US y el catálogo de archivos. Nombre visible Panther iOS. Compilación iOS no verificada. Para ver cambios, subir todos los archivos y compilar una nueva IPA.

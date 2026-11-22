@@ -1,0 +1,1 @@
+Fondo de Patches actualizado con la imagen de fantasma proporcionada. Asset: GhostPatchesBackground. Vista: PantherAssignedPatchesView en ThreeOneOSFive/App.swift. No se han modificado las funciones de keys ni la API. Compilación en Xcode no verificada.

@@ -1,0 +1,1 @@
+Pantalla sin barra inferior; fondo completo proporcional para evitar recorte del titulo; sin barra de estado; tarjetas mas abajo. Al pulsar una tarjeta se abre la pantalla real del patch con Aplicar/Restaurar, sin interruptores falsos. La aplicacion de patches depende de permisos y compatibilidad del dispositivo. No se garantiza modificacion de otras apps.

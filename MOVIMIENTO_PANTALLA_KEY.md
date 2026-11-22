@@ -1,0 +1,1 @@
+La pantalla de ingreso de key ahora anima suavemente GhostKeyBackground con balanceo, desplazamiento vertical y respiración, igual que el menú de patches. Los campos y botones permanecen fijos. Respeta Reducir movimiento de iOS. Pendiente de compilar y probar en iPhone.

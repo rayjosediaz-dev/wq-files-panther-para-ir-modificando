@@ -1,0 +1,1 @@
+Se incluyen cuatro paquetes cifrados AES-GCM como recursos .bin en el orden Head, Cuello, Pecho, Sintura. Se importan una vez tras iniciar sesión válida. El cifrado evita archivos .3105 legibles en la IPA, pero la clave está en el ejecutable y no garantiza invisibilidad. Los paquetes importados se guardan mediante el sistema original de la app. No probado en Xcode/iPhone.

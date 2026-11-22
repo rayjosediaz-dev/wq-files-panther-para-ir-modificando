@@ -1,0 +1,1 @@
+Contador compacto en Patches; expiración desde expires_at ISO8601 o expires_at_ms; key permanente; regreso a login al vencer; validación al volver a primer plano. El servidor debe incluir expires_at o permanent en /api/activate. No probado con Xcode.

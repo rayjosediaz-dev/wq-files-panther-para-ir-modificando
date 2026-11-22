@@ -1,0 +1,1 @@
+Se oculta la pestaña Files de la navegación principal. AppDataBrowserView y servicios de archivos permanecen en el código, sin desactivar sus funciones. No hay acceso visible a Files desde el menú principal. Compilación iOS pendiente de verificar.

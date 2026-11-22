@@ -1,0 +1,6 @@
+- Ghostface bajado 21 puntos más en el menú de patches.
+- Botón Cerrar sesión desplazado a la izquierda y botón con imagen FF MAX x Naruto a la derecha.
+- Imagen del botón extraída de la vista previa aprobada.
+- El botón intenta abrir freefiremax://; no está confirmado que el juego registre ese esquema en iOS. Si no se abre, aparece aviso. No se garantiza la apertura directa.
+- No se modificaron el sistema de keys, la lógica de patches, los audios ni Telegram.
+- Pendiente: compilar y probar en Xcode/iPhone.

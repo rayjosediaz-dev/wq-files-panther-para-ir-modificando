@@ -1,0 +1,1 @@
+Fondos limpios sin botones impresos: Solo Leveling, Naruto y Goku. Scary Movie sigue predeterminado. La paleta de controles de Patches se adapta al fondo (rojo, violeta, naranja, azul). No se alteraron los endpoints de Render, la validación de keys ni la calculadora. Pendiente compilar en Xcode y probar en iPhone.

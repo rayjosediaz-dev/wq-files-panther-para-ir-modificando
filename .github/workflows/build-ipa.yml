@@ -1,0 +1,54 @@
+name: Panther iOS - IPA sin firmar
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Mostrar proyecto
+        run: |
+          xcodebuild -version
+          test -f ThreeOneOSFive.xcodeproj/project.pbxproj
+          xcodebuild -list -project ThreeOneOSFive.xcodeproj
+      - name: Configurar servidor Panther (opcional)
+        env:
+          PANTHER_API_BASE_URL: ${{ vars.PANTHER_API_BASE_URL }}
+        run: |
+          if [ -n "${PANTHER_API_BASE_URL:-}" ]; then
+            case "$PANTHER_API_BASE_URL" in
+              https://*) /usr/libexec/PlistBuddy -c "Set :PantherAPIBaseURL $PANTHER_API_BASE_URL" ThreeOneOSFive/Info.plist ;;
+              *) echo "La URL del servidor debe usar HTTPS"; exit 1 ;;
+            esac
+          fi
+      - name: Compilar sin firmar
+        run: |
+          set -euo pipefail
+          xcodebuild build \
+            -project ThreeOneOSFive.xcodeproj \
+            -scheme 3105 \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath "$PWD/build" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY=""
+      - name: Empaquetar IPA
+        run: |
+          set -euo pipefail
+          APP=$(find build/Build/Products/Release-iphoneos -maxdepth 1 -name '*.app' -type d -print -quit)
+          test -n "$APP"
+          mkdir -p Payload
+          cp -R "$APP" Payload/
+          zip -qry Panther-iOS-unsigned.ipa Payload
+      - name: Subir IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: Panther-iOS-unsigned
+          path: Panther-iOS-unsigned.ipa
+          if-no-files-found: error

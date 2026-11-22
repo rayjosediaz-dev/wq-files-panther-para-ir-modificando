@@ -1,0 +1,8 @@
+name = "panther-ios-test"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "panther-ios-test"
+database_id = "REEMPLAZAR_ID_D1"
